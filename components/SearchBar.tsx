@@ -20,10 +20,8 @@ const SearchButton = ({ otherClasses }: { otherClasses: string }) => {
 };
 
 const SearchBar = ({ setManufacturer, setModel }) => {
-  const { saveScrollPosition } = usePersistentScroll();
   const [searchManufacturer, setSearchManufacturer] = useState("");
   const [searchModel, setSearchModel] = useState("");
-  const router = useRouter();
 
   const handleSearch = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
