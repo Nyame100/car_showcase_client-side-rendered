@@ -43,8 +43,6 @@ export default function Home() {
     getCars();
   }, [manufacturer, fuel, year, limit, model]);
 
-  const isDataEmpty = !Array.isArray(allCars) || allCars.length < 1 || !allCars;
-
   return (
     <main className="overflow-hidden">
       <Hero />
@@ -91,7 +89,6 @@ export default function Home() {
         ) : (
           <div className="home__error-container">
             <h2 className="text-black text-xl font-bold">Ooops, no results</h2>
-            <p>{allCars?.message}</p>
           </div>
         )}
       </div>
